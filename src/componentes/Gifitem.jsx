@@ -1,4 +1,4 @@
-import React from 'react'
+import ProTypes from 'prop-types'
 
 export const Gifitem = ({title, url, id}) => {
    
@@ -8,4 +8,9 @@ export const Gifitem = ({title, url, id}) => {
         <p>{ title }</p>
     </div>
   )
+}
+
+Gifitem.prototype = {
+  title: ProTypes.string.isRequired,
+  url: ProTypes.string.isRequired,
 }
